@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windsor Chess Lions - Expert Chess Instruction</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-background {
+            background: linear-gradient(to right, #2563eb, #1d4ed8);
+            
+            .tns-nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .tns-nav button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            border: none;
+            margin: 0 5px;
+            padding: 0;
+        }
+        .tns-nav button.tns-nav-active {
+            background: #3b82f6;
+        }
+        .grid-item {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger animations for grid items */
+        .grid-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .grid-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add animation delay utility classes */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow fade-in">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-center space-x-4">
+                <img src="/api/placeholder/80/80" alt="Windsor Chess Lions Logo" class="h-12">
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+<div class="gradient-background text-white fade-in flex items-center justify-center">
+    <div class="max-w-6xl px-4 py-20 text-center">
+        <h1 class="text-6xl font-bold mb-4">Master Chess With Windsor Chess Lions</h1>
+        <p class="text-xl mb-8">Take your game to the next level with experienced, championship-winning instruction</p>
+        <a href="https://forms.gle/1xit7PD9E8vyigor5" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors inline-block">
+            Register today!
+        </a>
+    </div>
+</div>
+    
+  <!-- Benefits of Chess for Kids Section -->
+<div class="bg-blue-50 py-12">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center fade-in group">
+            <span class="group-hover:italic inline-block">Why Should <i>Every</i> Child Learn Chess?</span>
+            <span class="hidden group-hover:inline-block ml-1">?</span>
+        </h2>
+        
+        <!-- Interactive Benefits Grid -->
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <!-- Critical Thinking Card -->
+            <div class="bg-white p-4 rounded-lg shadow-lg grid-item hover:transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-blue-600 mb-3 mx-auto transition-transform duration-300 hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-center">Critical Thinking</h3>
+                <p class="text-gray-600 text-center text-sm p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">Develops problem-solving skills and strategic thinking through complex puzzle-like situations</p>
+            </div>
+
+            <!-- Focus Card -->
+            <div class="bg-white p-4 rounded-lg shadow-lg grid-item hover:transform hover:scale-105 transition-transform duration-300 cursor-pointer delay-100">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-blue-600 mb-3 mx-auto animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-center">Concentration</h3>
+                <p class="text-gray-600 text-center text-sm p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">Improves focus and attention span through engaging, mentally stimulating gameplay</p>
+            </div>
+
+            <!-- Social Skills Card -->
+            <div class="bg-white p-4 rounded-lg shadow-lg grid-item hover:transform hover:scale-105 transition-transform duration-300 cursor-pointer delay-200">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-blue-600 mb-3 mx-auto transition-all duration-300 hover:mix-blend-multiply" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-center">Social Skills</h3>
+                <p class="text-gray-600 text-center text-sm p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">Builds sportsmanship, respect, and friendship through competitive play</p>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- College Application Benefits section -->
+                <div class="bg-white p-4 rounded-lg shadow-lg grid-item">
+                    <h3 class="text-xl font-bold mb-3 text-center text-blue-600">College Application Benefits</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-3 p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                            <p class="text-sm">Stands out as a unique extracurricular activity on college applications</p>
+                        </div>
+                        <div class="flex items-center space-x-3 p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            <p class="text-sm">Demonstrates long-term commitment and strategic thinking skills</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Benefits section -->
+                <div class="bg-white p-4 rounded-lg shadow-lg grid-item delay-100">
+                    <h3 class="text-xl font-bold mb-3 text-center text-blue-600">Academic Benefits</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-3 p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                            <p class="text-sm">Chess players show improved memory and math skills</p>
+                        </div>
+                        <div class="flex items-center space-x-3 p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">
+                            <svg class="w-5 h-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <path d="M248,132a56,56,0,0,0-32-50.6V72a48,48,0,0,0-88-26.5A48,48,0,0,0,40,72v9.4a56,56,0,0,0,0,101.2V184a48,48,0,0,0,88,26.5A48,48,0,0,0,216,184v-1.4A56.1,56.1,0,0,0,248,132ZM88,216a32,32,0,0,1-31.8-28.6,49.3,49.3,0,0,0,7.8.6h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.7,94.3,8.1,8.1,0,0,0,56,86.7V72a32,32,0,0,1,64,0v76.3A47.4,47.4,0,0,0,88,136a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a49.3,49.3,0,0,0,7.8-.6A32,32,0,1,1,168,152a8,8,0,0,0,0-16,47.4,47.4,0,0,0-32,12.3V72a32,32,0,0,1,64,0V86.7a8.1,8.1,0,0,0,5.3,7.6A40,40,0,0,1,192,172ZM60,128a8,8,0,0,1,0-16A20.1,20.1,0,0,0,80,92V84a8,8,0,0,1,16,0v8A36,36,0,0,1,60,128Zm144-8a8,8,0,0,1-8,8,36,36,0,0,1-36-36V84a8,8,0,0,1,16,0v8a20.1,20.1,0,0,0,20,20A8,8,0,0,1,204,120Z" fill="currentColor"></path>
+                            </svg>
+                            <p class="text-sm">Studies show chess can raise IQ scores by several points</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Achievements Section -->
+<div class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold mb-12 text-center fade-in">Why learn with <i>us</i>?</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- State Championships -->
+        <div class="bg-white p-6 rounded-lg shadow grid-item delay-100 hover:transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <div class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-blue-600 mb-4 mx-auto transition-transform duration-300 hover:scale-110" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z"/>
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-center">State Championships</h3>
+            <p class="text-gray-600 text-center text-sm p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">Multiple Michigan state championship victories, demonstrating a complete mastery of competitive chess</p>
+        </div>
+
+        <!-- School Championships -->
+        <div class="bg-white p-6 rounded-lg shadow grid-item delay-200 hover:transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <div class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-blue-600 mb-4 mx-auto transition-transform duration-300 hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-center">School championship wins</h3>
+            <p class="text-gray-600 text-center text-sm p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">Michigan school champion in K-3, K-5, K-8, K-12, everytime with 4 or more wins. Won many interstate tournaments</p>
+        </div>
+
+        <!-- Club Leadership -->
+        <div class="bg-white p-6 rounded-lg shadow grid-item delay-300 hover:transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <div class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-blue-600 mb-4 mx-auto transition-transform duration-300 hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-center">Club Leadership</h3>
+            <p class="text-gray-600 text-center text-sm p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">7+ years of teaching experience and successful management of a large, well known chess club</p>
+        </div>
+    </div>
+</div>
+
+<!-- Online Classes Section -->
+<div class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center fade-in">Why Choose <i>Online Group Classes</i>?</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Online Learning Benefits -->
+            <div class="bg-white p-6 rounded-lg shadow grid-item hover:transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <div class="relative">
+                    <svg style="color: blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-12 h-12 text-blue-600 mb-4 mx-auto transition-transform duration-300 hover:scale-110">
+                        <path d="M7 17H2a2 2 0 0 1-2-2V2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2h-5l4 2v1H3v-1l4-2zM2 2v11h16V2H2z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">Benefits of Online Learning</h3>
+                <ul class="space-y-3 p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">
+                    <li>• Learn from the comfort of anywhere</li>
+                    <li>• Interactive digital chess boards for clear demonstration</li>
+                    <li>• Recordable lessons for future review</li>
+                    <li>• Connect with peers across different locations</li>
+                    <li>• Flexible scheduling options for everyone</li>
+                </ul>
+            </div>
+
+            <!-- Class Features -->
+            <div class="bg-white p-6 rounded-lg shadow grid-item delay-100 hover:transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <div class="relative">
+                    <svg style="color: blue" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-blue-600 mb-4 mx-auto transition-transform duration-300 hover:scale-110">
+                        <title>Google Classroom</title>
+                        <path d="M1.6367 1.6367C.7322 1.6367 0 2.369 0 3.2734v17.4532c0 .9045.7322 1.6367 1.6367 1.6367h20.7266c.9045 0 1.6367-.7322 1.6367-1.6367V3.2734c0-.9045-.7322-1.6367-1.6367-1.6367H1.6367zm.545 2.1817h19.6367v16.3632h-2.7266v-1.0898h-4.9102v1.0898h-12V3.8184zM12 8.1816c-.9046 0-1.6367.7322-1.6367 1.6368 0 .9045.7321 1.6367 1.6367 1.6367.9046 0 1.6367-.7322 1.6367-1.6367 0-.9046-.7321-1.6368-1.6367-1.6368zm-4.3633 1.9102c-.6773 0-1.2285.5493-1.2285 1.2266 0 .6772.5512 1.2265 1.2285 1.2265.6773 0 1.2266-.5493 1.2266-1.2265 0-.6773-.5493-1.2266-1.2266-1.2266zm8.7266 0c-.6773 0-1.2266.5493-1.2266 1.2266 0 .6772.5493 1.2265 1.2266 1.2265.6773 0 1.2285-.5493 1.2285-1.2265 0-.6773-.5512-1.2266-1.2285-1.2266zM12 12.5449c-1.179 0-2.4128.4012-3.1484 1.0059-.384-.1198-.8043-.1875-1.2149-.1875-1.3136 0-2.7285.695-2.7285 1.5586v.8965h14.1836v-.8965c0-.8637-1.4149-1.5586-2.7285-1.5586-.4106 0-.831.0677-1.2149.1875-.7356-.6047-1.9694-1.0059-3.1484-1.0059Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">Class Features</h3>
+                <ul class="space-y-3 p-2 bg-blue-50 rounded-lg transition-transform transform hover:scale-105">
+                    <li>• Small group sizes for personalized attention</li>
+                    <li>• Bites of information to slowly build a strong base</li>
+                    <li>• Regularly held practice tournaments</li>
+                    <li>• Strategy workshops and puzzle solving</li>
+                    <li>• Progress tracking and performance analysis</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+    <!-- Contact Section -->
+<div class="max-w-6xl mx-auto px-4 py-16 text-center fade-in">
+    <div class="flex flex-col items-center">
+        <h2 class="text-3xl font-bold mb-8">Ready to 
+            <span class="word-cycle">
+                <span class="word-cycle-item">Improve</span>
+                <span class="word-cycle-item">Advance</span>
+                <span class="word-cycle-item">Upgrade</span>
+                <span class="word-cycle-item">Enhance</span>
+                <span class="word-cycle-item">Develop</span>
+            </span>
+            Your Chess?
+        </h2>
+        <a href="https://forms.gle/1xit7PD9E8vyigor5" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors">
+            Register today!
+        </a>
+    </div>
+</div>
+<style>
+.word-cycle {
+    position: relative;
+    display: inline-block;
+}
+.word-cycle-item {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    animation: cycleWords 5s linear infinite;
+    font-style: italic;
+}
+.word-cycle-item:nth-child(2) { animation-delay: 1s; }
+.word-cycle-item:nth-child(3) { animation-delay: 2s; }
+.word-cycle-item:nth-child(4) { animation-delay: 3s; }
+.word-cycle-item:nth-child(5) { animation-delay: 4s; }
+@keyframes cycleWords {
+    0%, 5% { opacity: 0; }
+    10%, 30% { opacity: 1; }
+    35%, 100% { opacity: 0; }
+}
+/* Add initial visibility for first word */
+.word-cycle-item:first-child {
+    position: relative;
+    opacity: 1;
+}
+</style>
+    <div class="space-y-6 mb-8">
+        <div class="flex flex-col items-center space-y-2">
+            <h3 class="text-xl font-semibold">Email us to level up your chess!</h3>
+            <a href="mailto:windsorchesslions@gmail.com" class="text-blue-600 hover:text-blue-700 transition-colors">
+                windsorchesslions@gmail.com
+            </a>
+        </div>
+        
+        <div class="flex flex-col items-center space-y-2">
+            <h3 class="text-xl font-semibold">Have a question? Call us!</h3>
+            <div class="space-y-1">
+                <a href="tel:226-260-8397" class="block text-blue-600 hover:text-blue-700 transition-colors">
+                    (226) 260-8397
+                </a>
+                <a href="tel:614-282-0138" class="block text-blue-600 hover:text-blue-700 transition-colors">
+                    (614) 282-0138
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 fade-in">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>© 2024 Windsor Chess Lions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in, .grid-item').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Make header visible immediately
+        document.querySelector('header').classList.add('visible');
+        
+                var slider = tns({
+            container: '.my-slider',
+            items: 1,
+            slideBy: 1,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: true,
+            responsive: {
+                640: {
+                    items: 2
+                },
+                1024: {
+                    items: 3
+                }
+            },
+            gutter: 20,
+            preventScrollOnTouch: 'auto'
+        });
+    </script>
+</body>
+</html>
