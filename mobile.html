@@ -76,6 +76,17 @@
         /* Smooth scroll behavior */
         html {
             scroll-behavior: smooth;
+            
+            @media (max-width: 768px) {
+  .grid-item {
+    transition: all 0.3s ease;
+  }
+  .grid-item.scroll-active {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+}
         }
 
         /* Add animation delay utility classes */
@@ -83,16 +94,6 @@
         .delay-200 { transition-delay: 200ms; }
         .delay-300 { transition-delay: 300ms; }
         .delay-400 { transition-delay: 400ms; }
-        
-        @media (max-width: 768px) {
-  .grid-item {
-    transition: transform 0.3s ease;
-  }
-  .grid-item.scrolled {
-    transform: scale(1.05);
-    z-index: 10;
-  }
-}
     </style>
 </head>
 <body class="min-h-screen bg-gray-50">
@@ -438,23 +439,17 @@
         document.addEventListener('DOMContentLoaded', () => {
   const gridItems = document.querySelectorAll('.grid-item');
   
-  const observerOptions = {
-    threshold: 0.5 // Trigger when 50% of the item is visible
-  };
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('scrolled');
+        entry.target.classList.add('scroll-active');
       } else {
-        entry.target.classList.remove('scrolled');
+        entry.target.classList.remove('scroll-active');
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.5 });
 
-  gridItems.forEach(item => {
-    observer.observe(item);
-  });
+  gridItems.forEach(item => observer.observe(item));
 });
     </script>
 </body>
