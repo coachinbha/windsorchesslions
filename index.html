@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windsor Chess Lions</title>
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Windsor Chess Lions deliver the finest chess tutoring in Windsor, backed by over 7 years of proven success in mentoring kids and shaping state champions. Join a leader in chess education today!">
+    <meta name="keywords" content="Windsor Chess, Windsor Chess Lions, chess instruction, chess classes, chess training, Windsor chess teaching, windsor chess teaching, windsor chess, chess in Windsor, chess teaching in Windsor">
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+   
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Windsor Chess Lions",
+      "image": "Contact.jpg",
+      "description": "Expert chess instruction for all levels",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Windsor",
+        "addressCountry": "CA"
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "Chess classes for beginners, advanced players, and youth"
+      }
+    }
+    </script>
+     <style>
+        /* Minimalist Black and White Theme */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        /* Navigation Styles */
+        .navigation {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-color);
+            z-index: 100;
+            border-bottom: 1px solid var(--text-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.5rem 0;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: #666;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                gap: 1rem;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem 0;
+            }
+        }
+
+                .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .logo img {
+            max-height: 50px;
+            max-width: 200px;
+            object-fit: contain;
+        }
+
+        /* Existing styles from the previous document */
+        h1, h2, h3 {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0.5rem 0;
+            }
+        }
+        header h1 {
+            font-size: 5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 500px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            max-width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .services, .about, .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .service-card {
+            background-color: var(--bg-color);
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .service-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #333;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            header h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                padding: 0.5rem 0;
+            }
+
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                flex-direction: row;
+                gap: 1rem;
+            }
+
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .mobile-menu-toggle svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--text-color);
+        }
+
+        .mobile-dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: var(--bg-color);
+            border: 1px solid var(--text-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 200;
+            width: 100%;
+            max-width: 175px;
+        }
+
+        .mobile-dropdown-menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .mobile-dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-dropdown-menu a:hover {
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-container {
+                position: relative;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-row {
+            grid-column: span 4;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background-color: var(--accent-color);
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .image-3-4 {
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
+        }
+
+        .image-4-3 {
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
+        }
+
+        .image-container:hover {
+            transform: scale(1.02);
+            z-index: 10;
+        }
+
+        .image-container:hover .image-3-4,
+        .image-container:hover .image-4-3 {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation" data-aos="fade-down">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="Contact.png" alt="Windsor Chess Lions Logo">
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Teaching</a>
+                <a href="#about">About</a>
+                <a href="https://coachinbha.github.io/websiteminimalist/tournaments.html">Tournaments</a>
+                <a href="#contact">Contact</a>
+                 <a href="#gallery2">Gallery</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-dropdown-menu" class="mobile-dropdown-menu">
+                <a href="#home">Home</a>
+                <a href="#services">Teaching</a>
+                <a href="#about">About</a>
+                <a href="https://coachinbha.github.io/websiteminimalist/tournaments.html">Tournaments</a>
+                <a href="#contact">Contact</a>
+                 <a href="#gallery2">Gallery</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" data-aos="fade-down" data-aos-duration="1500">
+        <div class="container">
+            <h1>Windsor Chess Lions</h1>
+            <p>Where Everyone Can Become a Champion</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content" data-aos="fade-right" data-aos-duration="1500">
+            <h2>Chess Lessons for All Levels</h2>
+            <p>Unlock your chess potential with personalized coaching in Windsor. Whether you're a beginner or an advanced player, our expert instruction will elevate your game.</p>
+            <a href="https://coachinbha.github.io/websiteminimalist/signup.html" class="cta-button" data-aos="zoom-in" data-aos-duration="1500">Book a Lesson</a>
+        </div>
+        <div class="hero-image" data-aos="fade-left" data-aos-duration="1500">
+            <img src="Chess_Board.svg" alt="Chess Board" />
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services container">
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1500">Our Chess Programs</h2>
+        <div class="service-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                <h3>Beginner Lessons</h3>
+                <p>Learn the fundamentals of chess from scratch. Perfect for children and adults new to the game.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                <h3>Intermediate Training</h3>
+                <p>Enhance your strategic thinking and tactical skills. Ideal for players looking to improve their game.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                <h3>Advanced Coaching</h3>
+                <p>Dive deep into complex strategies and competitive play. Tailored for serious chess enthusiasts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About us Section -->
+    <section id="about" class="about container">
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1500">About Us</h2>
+        <div class="hero" data-aos="fade-right" data-aos-duration="1500">
+            <div class="hero-content">
+                <h3>Experienced Chess Instructors</h3>
+                <p>We are the Windsor Chess Lions, dedicated to promoting the ancient game of strategy and intellect across Canada and the USA. Starting out as a community chess club in 2016, we kept growing, and now we've taught and have proudly coached and led Team Windsor (ON) and Team Novi (MI) teams to victory in several state-level championships. With us everyone can be a champion.</p>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1500">
+                <img src="library.jpg" alt="Chess Coach" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact container">
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1500">Contact Us</h2>
+        <div class="contact-info" data-aos="fade-up" data-aos-duration="1500">
+            <p>Phone: (226) 260-8397</p>
+            <p>Email: Windsorchesslions@gmail.com</p>
+        </div>
+        <a href="mailto:coach@windsorchessacademy.com" class="cta-button" data-aos="zoom-in" data-aos-duration="1500">Send an Email</a>
+    </section>
+
+    <!-- Footer -->
+    <footer data-aos="fade-up" data-aos-duration="1500">
+        <p>&copy; 2024 Windsor Chess Academy. All Rights Reserved.</p>
+    </footer>
+    
+    <section id="gallery2" class="gallery2"></section>
+    <div class="gallery">
+        <div class="gallery-row">
+            <div class="image-container">
+                <img src="site1.jpg" alt="Chess Image 1" class="image-4-3">
+            </div>
+            <div class="image-container">
+                <img src="site3.jpg" alt="Chess Image 3" class="image-4-3">
+            </div>
+            <div class="image-container">
+                <img src="site5.jpg" alt="Chess Image 5" class="image-4-3">
+            </div>
+            <div class="image-container">
+                <img src="site7.jpg" alt="Chess Image 7" class="image-4-3">
+            </div>
+        </div>
+        <div class="gallery-row">
+            <div class="image-container">
+                <img src="site2.jpg" alt="Chess Image 2" class="image-3-4">
+            </div>
+            <div class="image-container">
+                <img src="site4.jpg" alt="Chess Image 4" class="image-3-4">
+            </div>
+            <div class="image-container">
+                <img src="site6.jpg" alt="Chess Image 6" class="image-3-4">
+            </div>
+            <div class="image-container">
+                <img src="site8.jpg" alt="Chess Image 8" class="image-3-4">
+            </div>
+        </div>
+        <div class="gallery-row">
+            <div class="image-container">
+                <img src="site9.jpg" alt="Chess Image 9" class="image-4-3">
+            </div>
+            <div class="image-container">
+                <img src="site11.jpg" alt="Chess Image 11" class="image-4-3">
+            </div>
+            <div class="image-container">
+                <img src="site13.jpg" alt="Chess Image 13" class="image-4-3">
+            </div>
+            <div class="image-container">
+                <img src="site15.jpg" alt="Chess Image 15" class="image-4-3">
+            </div>
+        </div>
+        <div class="gallery-row">
+            <div class="image-container">
+                <img src="site10.jpg" alt="Chess Image 10" class="image-3-4">
+            </div>
+            <div class="image-container">
+                <img src="site12.jpg" alt="Chess Image 12" class="image-3-4">
+            </div>
+            <div class="image-container">
+                <img src="site14.jpg" alt="Chess Image 14" class="image-3-4">
+            </div>
+            <div class="image-container">
+                <img src="site16.jpg" alt="Chess Image 16" class="image-3-4">
+            </div>
+        </div>
+        <div class="gallery-row">
+            <div class="image-container">
+                <img src="site17.jpg" alt="Chess Image 17" class="image-4-3">
+            </div>
+            <div class="image-container">
+                <img src="site19.jpg" alt="Chess Image 19" class="image-4-3">
+            </div>
+            <div class="image-container">
+                <img src="site21.jpg" alt="Chess Image 21" class="image-4-3">
+            </div>
+            <div class="image-container">
+                <img src="site23.jpg" alt="Chess Image 23" class="image-4-3">
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1500, // Slower animation
+            once: true, // Only animate elements once
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
+
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileDropdownMenu.style.display = 
+                    mobileDropdownMenu.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (event) => {
+                if (!mobileMenuToggle.contains(event.target) && 
+                    !mobileDropdownMenu.contains(event.target)) {
+                    mobileDropdownMenu.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
