@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Tutoring Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        .signup-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+            width: 100%;
+        }
+
+        .signup-container {
+            width: 90%;
+            max-width: 600px;
+            background-color: var(--bg-color);
+            border: 2px solid var(--text-color);
+            padding: 2rem;
+        }
+
+        .signup-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .signup-form label {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .signup-form input, 
+        .signup-form select {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+        }
+
+        .service-card .details-btn,
+        .signup-button,
+        .cta-button {
+            background-color: white;
+            color: black;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 1em 2em;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid black;
+            box-shadow: 0 0 0 0 black;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: auto;
+        }
+
+        .service-card .details-btn:hover,
+        .signup-button:hover,
+        .cta-button:hover {
+            transform: translateY(-4px) translateX(-2px);
+            box-shadow: 2px 5px 0 0 black;
+        }
+
+        .service-card .details-btn:active,
+        .signup-button:active,
+        .cta-button:active {
+            transform: translateY(2px) translateX(1px);
+            box-shadow: 0 0 0 0 black;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .signup-title {
+                font-size: 1.8rem;
+            }
+
+            .signup-container {
+                padding: 1.5rem;
+            }
+
+            .signup-button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="signup" class="signup-section">
+        <div class="signup-container">
+            <h2 class="signup-title">Windsor Chess Lions Enrollment</h2>
+            
+            <!-- Replace YOUR-EMAIL-HERE with your actual email -->
+            <form id="signup-form" class="signup-form" action="https://formspree.io/f/xyzyanlw" method="POST">
+                <div class="parent-guardian-section">
+                    <h3 class="signup-subtitle">Parent/Guardian Information</h3>
+                    <div class="form-group">
+                        <label for="parent-name">Full Name</label>
+                        <input type="text" id="parent-name" name="parent-name" required placeholder="Enter parent/guardian name">
+                    </div>
+                    <div class="form-group">
+                        <label for="parent-email">Email Address</label>
+                        <input type="email" id="parent-email" name="parent-email" required placeholder="Enter parent/guardian email">
+                    </div>
+                    <div class="form-group">
+                        <label for="parent-phone">Phone Number</label>
+                        <input type="tel" id="parent-phone" name="parent-phone" required placeholder="Enter parent/guardian phone number">
+                    </div>
+                </div>
+
+                <div class="student-section">
+                    <h3 class="signup-subtitle">Student Information</h3>
+                    <div class="form-group">
+                        <label for="student-name">Student Full Name</label>
+                        <input type="text" id="student-name" name="student-name" required placeholder="Enter student's name">
+                    </div>
+                    <div class="form-group">
+                        <label for="student-age">Age</label>
+                        <input type="number" id="student-age" name="student-age" required placeholder="Enter student's age">
+                    </div>
+                    <div class="form-group">
+                        <label for="skill-level">Skill Level</label>
+                        <select id="skill-level" name="skill-level" required>
+                            <option value="">Select Skill Level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="goals">Extra Info</label>
+                    <input type="text" id="goals" name="goals" placeholder="extra info, optional">
+                </div>
+
+                <button type="submit" class="signup-button">Start Chess Journey</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(event.target);
+            
+            // Submit to Formspree
+            fetch('https://formspree.io/f/xyzyanlw', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Create the confirmation page content
+                    const confirmationHTML = `
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Enrollment Confirmed - Windsor Chess Lions</title>
+                        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
+                        <style>
+                            :root {
+                                --bg-color: #ffffff;
+                                --text-color: #000000;
+                                --accent-color: #000000;
+                            }
+
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                            }
+
+                            body {
+                                font-family: 'Montserrat', sans-serif;
+                                background-color: var(--bg-color);
+                                color: var(--text-color);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                min-height: 100vh;
+                                padding: 2rem;
+                                line-height: 1.6;
+                            }
+
+                            .confirmation-container {
+                                width: 100%;
+                                max-width: 600px;
+                                background-color: var(--bg-color);
+                                border: 2px solid var(--text-color);
+                                padding: 3rem;
+                                text-align: center;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 2rem;
+                            }
+
+                            .logo {
+                                max-width: 250px;
+                                height: auto;
+                                margin-bottom: 1rem;
+                            }
+
+                            .confirmation-title {
+                                font-size: 2rem;
+                                font-weight: 900;
+                                text-transform: uppercase;
+                                letter-spacing: -1px;
+                            }
+
+                            .confirmation-message {
+                                font-size: 1rem;
+                                margin-bottom: 1rem;
+                            }
+
+                            .back-button {
+                                background-color: white;
+                                color: black;
+                                font-size: 17px;
+                                font-weight: 600;
+                                padding: 1em 2em;
+                                cursor: pointer;
+                                transition: all 0.3s ease-in-out;
+                                border: 1px solid black;
+                                box-shadow: 0 0 0 0 black;
+                                text-decoration: none;
+                                display: inline-block;
+                            }
+
+                            .back-button:hover {
+                                transform: translateY(-4px) translateX(-2px);
+                                box-shadow: 2px 5px 0 0 black;
+                            }
+
+                            .back-button:active {
+                                transform: translateY(2px) translateX(1px);
+                                box-shadow: 0 0 0 0 black;
+                            }
+
+                            @media (max-width: 768px) {
+                                .confirmation-container {
+                                    padding: 2rem;
+                                }
+
+                                .logo {
+                                    max-width: 200px;
+                                }
+
+                                .confirmation-title {
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="confirmation-container">
+                            <img src="Contact.png" alt="Windsor Chess Lions Logo" class="logo">
+                            
+                            <h1 class="confirmation-title">Enrollment Confirmed!</h1>
+                            
+                            <p class="confirmation-message">
+                                Thank you for enrolling in Windsor Chess Lions. 
+                                We've received your application and will be in touch soon 
+                                to confirm your student's chess journey.
+                            </p>
+                            
+                            <a href="https://windsorchesslions.com/" class="back-button">Return to Homepage</a>
+                        </div>
+                    </body>
+                    </html>
+                    `;
+                    
+                    // Replace the entire document with the confirmation page
+                    document.open();
+                    document.write(confirmationHTML);
+                    document.close();
+                } else {
+                    // Handle potential errors
+                    alert('There was a problem submitting your form. Please try again.');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('There was a problem submitting your form. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>
